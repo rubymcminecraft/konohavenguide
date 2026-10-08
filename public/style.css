@@ -1,0 +1,52 @@
+@font-face{font-family:general;src:url("fonts/general.woff2") format("woff2");font-display:swap}
+/* Konohaven PVP Arena palette, toned down: night-purple gradient, faint glows, flat dark cards with a thin colored border. Single dark theme on purpose. */
+:root{
+  color-scheme:dark;
+  --bg-1:#0a0a0f; --bg-2:#1a0a2e; --bg-3:#0f0a1a;
+  --fg:#ffffff; --muted:rgba(255,255,255,.62); --faint:rgba(255,255,255,.2);
+  --card:rgba(0,0,0,.6);
+  --fuchsia:#e879f9; --cyan:#22d3ee; --violet:#a78bfa; --amber:#fbbf24; --teal:#14b8a6; --red:#f87171;
+  --display:general,"General Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:general,"General Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{background:var(--bg-1)}
+body{margin:0;min-height:100%;color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
+  background:linear-gradient(135deg,var(--bg-1),var(--bg-2) 50%,var(--bg-3));background-attachment:fixed;overflow-x:hidden}
+.glow{position:fixed;border-radius:50%;filter:blur(64px);pointer-events:none;z-index:0}
+.glow.a{top:80px;left:-40px;width:288px;height:288px;background:rgba(192,38,211,.08)}
+.glow.b{bottom:60px;right:-60px;width:384px;height:384px;background:rgba(6,182,212,.07)}
+.glow.c{top:45%;left:50%;width:min(600px,90vw);height:min(600px,90vw);transform:translate(-50%,-50%);background:rgba(124,58,237,.06)}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding-inline:20px;padding-block:72px 64px}
+header{text-align:center;margin-bottom:44px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,6vw,2.75rem);line-height:1.1;letter-spacing:-.01em;margin:0 0 12px;color:var(--fg);text-wrap:balance}
+.kicker{color:var(--muted);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;margin:0}
+.intro{color:var(--muted);max-width:56ch;margin:18px auto 0;font-size:1rem}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:22px;counter-reset:step}
+.step{position:relative}
+.card{position:relative;background:var(--card);border:1px solid color-mix(in srgb,var(--c1) 30%,transparent);border-radius:6px;padding:22px 24px}
+.label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.label span{color:var(--c1);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em}
+.label b{font-weight:700;color:var(--c1);font-size:1rem;line-height:1;font-variant-numeric:tabular-nums}
+h2{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:0;line-height:1.1;margin:0 0 8px;text-wrap:balance}
+p{margin:0}
+.card p+p,.card p+ul,.card ul+p{margin-top:10px}
+.card ul{margin:0;padding-left:0;list-style:none;display:grid;gap:8px}
+.card li{color:var(--muted)}
+.card li strong{color:var(--fg);font-weight:700}
+.files{display:grid;gap:10px;margin-top:12px}
+.file{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;color:var(--fg);background:rgba(255,255,255,.07);border:1px solid var(--faint);border-radius:4px;padding:2px 7px;white-space:nowrap}
+.file small{color:var(--muted);font-size:.92rem}
+.opt{color:var(--c1);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em}
+.s1{--c1:var(--fuchsia);--c2:#7c3aed}
+.s2{--c1:var(--cyan);--c2:var(--teal)}
+.s3{--c1:var(--amber);--c2:#f59e0b}
+.s4{--c1:var(--violet);--c2:var(--fuchsia)}
+.s5{--c1:#4ade80;--c2:var(--cyan)}
+.notes{margin-top:40px}
+.notes h3{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin:0 0 14px;text-align:center}
+.notes .card{--c1:var(--red);border-color:rgba(248,113,113,.3)}
+.notes ul{display:grid;gap:12px}
+footer{margin-top:44px;text-align:center;color:rgba(255,255,255,.4);font-size:.75rem;text-transform:uppercase;letter-spacing:.18em}
+@media (max-width:480px){.card{padding:18px}h2{font-size:1.15rem}}

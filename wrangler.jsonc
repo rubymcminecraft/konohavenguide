@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "konohaven-guide",
+  "compatibility_date": "2026-10-08",
+  // Static site only: Cloudflare serves everything in public/ and no worker code runs.
+  "assets": {
+    "directory": "./public"
+  }
+}
