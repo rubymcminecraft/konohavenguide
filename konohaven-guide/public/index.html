@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moving Your Settings</title>
+  <meta name="description" content="How to copy options.txt, config and journeymap from an old Minecraft instance to a new one after an update.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glow a" aria-hidden="true"></div>
+<div class="glow b" aria-hidden="true"></div>
+<div class="glow c" aria-hidden="true"></div>
+
+<main>
+  <header>
+    <p class="kicker">Konohaven · Update guide</p>
+    <h1>Bring your settings</h1>
+    <p class="intro">When you make a new instance for an update, your settings, keybinds and map stay behind in the old one. Copying them over takes a couple of minutes.</p>
+  </header>
+
+  <ol class="steps">
+    <li class="step s1"><div class="card">
+      <div class="label"><span>Step</span><b>1</b></div>
+      <h2>Launch the new instance once</h2>
+      <p>Start it, let it reach the title screen, then close it. That creates the folders you'll be pasting into.</p>
+    </div></li>
+
+    <li class="step s2"><div class="card">
+      <div class="label"><span>Step</span><b>2</b></div>
+      <h2>Open the old instance's folder</h2>
+      <ul>
+        <li><strong>Modrinth App:</strong> right-click the instance, then Open folder</li>
+        <li><strong>CurseForge:</strong> right-click the instance, then Open Folder</li>
+        <li><strong>Prism:</strong> select the instance, then Folder on the right</li>
+        <li><strong>Vanilla launcher:</strong> Installations, hover the install, click the folder icon</li>
+      </ul>
+    </div></li>
+
+    <li class="step s3"><div class="card">
+      <div class="label"><span>Step</span><b>3</b></div>
+      <h2>Copy these</h2>
+      <div class="files">
+        <div class="file"><code>options.txt</code><small>video settings, keybinds, volume</small></div>
+        <div class="file"><code>config</code><small>all your mod settings</small></div>
+        <div class="file"><code>journeymap</code><small>your explored map and waypoints</small></div>
+        <div class="file"><code>servers.dat</code><small>your server list</small><span class="opt">Optional</span></div>
+      </div>
+    </div></li>
+
+    <li class="step s4"><div class="card">
+      <div class="label"><span>Step</span><b>4</b></div>
+      <h2>Paste into the new instance</h2>
+      <p>Open the new instance's folder the same way and paste everything in. If it asks, pick <strong>Replace</strong>.</p>
+    </div></li>
+
+    <li class="step s5"><div class="card">
+      <div class="label"><span>Step</span><b>5</b></div>
+      <h2>Launch and play</h2>
+      <p>Your settings, binds and map should all be back.</p>
+    </div></li>
+  </ol>
+
+  <section class="notes">
+    <h3>Couple things</h3>
+    <div class="card">
+      <ul>
+        <li><strong>Don't copy the mods folder.</strong> Those mods are for the old version and will crash the new one.</li>
+        <li><strong>A mod acting weird?</strong> Delete just that mod's file inside <code>config</code> and it'll make a fresh one next launch.</li>
+        <li><strong>Close the game first.</strong> If it's still open, it can overwrite your files when it shuts down.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>See you on Konohaven</footer>
+</main>
+</body>
+</html>
